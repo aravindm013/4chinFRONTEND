@@ -22,38 +22,37 @@ const Child = ({title}) => {
   )
 }
 
-export const Routers = () => {
+const Routers = () => {
     return (
         <Router>
-      <div>
-        
-
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
-        <Switch>
-          {/* < Route path="/:board/:id" children={<Child />} />
-          <Route path="/anime">
-            <Board />
-          </Route> */}
-          
-          <Route path='/boards/:board/:id' children={<Thread/>} />
-          < Route path="/boards/:board" children={<Board />} />
-          <Route path='404/boards/:board' children ={<Error404/>} />
-          <Route path='404/thread/:id' children = {<Error404/>} />
-          <Route path="/404">
-            <Error404 />
-          </Route>
-          <Route path="/faq">
-            <Faq />
-          </Route>
-          <Route path="/">
-          
-            <Home />
-          </Route>
-          
-          
-        </Switch>
-      </div>
-    </Router>
+          <div>
+            {/* A <Switch> looks through its children <Route>s and
+                renders the first one that matches the current URL. */}
+            <Switch>
+              {/* < Route path="/:board/:id" children={<Child />} />
+              <Route path="/anime">
+                <Board />
+              </Route> */}
+              
+              <Route path='/boards/:board/:id' children={<Thread/>} />
+              <Route path="/boards/:board" children={<Board />} />
+              <Route path='404/boards/:board' children ={<Error404/>} />
+              <Route path='404/thread/:id' children = {<Error404/>} />
+              <Route path="/404">
+                <Error404 />
+              </Route>
+              <Route path="/faq">
+                <Faq />
+              </Route>
+              <Route path="/">
+                <Home />
+              </Route>
+              
+              
+            </Switch>
+          </div>
+        </Router>
     )
 }
+
+export default Routers

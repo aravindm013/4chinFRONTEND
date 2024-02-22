@@ -45,6 +45,9 @@ h1 {
   border-left: rgb(150, 7, 7) 1px solid;
   border-right: rgb(150, 7, 7) 1px solid;
 }
+.popular-thread-item {
+  justify-content: space-between;
+}
 .listname {
   border-top: rgb(150, 7, 7) 1px solid;
   border-left: rgb(150, 7, 7) 1px solid;
